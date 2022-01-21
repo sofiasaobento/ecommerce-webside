@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketCode | Detalle de la orden</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <!-- Css Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+  <!-- Header Section Begin -->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9">
+          <div class="header__logo">
+            <a href="#"><img src="img/logo_full.svg" width="150"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header Section End -->
+
+  <!-- Breadcrumb Section Begin -->
+  <section class="breadcrumb-option">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="breadcrumb__text">
+            <h4>Compra de <span id="nombre">XXXXXXXXX XXXXX</span></h4>
+            <div class="breadcrumb__links">
+              <a href="#">Inicio</a>
+              <span>Carrito</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Breadcrumb Section End -->
+
+  <!-- Shopping Cart Section Begin -->
+  <section class="shopping-cart spad">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="shopping__cart__table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody id="items">
+                <tr id="ccu">
+                  <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                      <img src="img/shopping-cart/cart-1.jpg">
+                    </div>
+                    <div class="product__cart__item__text">
+                      <h6>T-shirt Contrast Pocket</h6>
+                      <h5 id="ccu-precio">$ X</h5>
+                    </div>
+                  </td>
+                  <td class="quantity__item">
+                    <div class="quantity">
+                      <div class="pro-qty-2">
+                        <input type="text" value="1" readonly>
+                      </div>
+                    </div>
+                  </td>
+                  <td id="ccu-total" class="cart__price">$ X</td>
+                </tr>
+                <tr id="ztd">
+                  <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                      <img src="img/shopping-cart/cart-2.jpg">
+                    </div>
+                    <div class="product__cart__item__text">
+                      <h6>Diagonal Textured Cap</h6>
+                      <h5 id="ztd-precio">$ X</h5>
+                    </div>
+                  </td>
+                  <td class="quantity__item">
+                    <div class="quantity">
+                      <div class="pro-qty-2">
+                        <input type="text" value="3" readonly>
+                      </div>
+                    </div>
+                  </td>
+                  <td id="ztd-total" class="cart__price">$ X</td>
+                </tr>
+                <tr id="bgb">
+                  <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                      <img src="img/shopping-cart/cart-3.jpg">
+                    </div>
+                    <div class="product__cart__item__text">
+                      <h6>Basic Flowing Scarf</h6>
+                      <h5 id="bgb-precio">$ X</h5>
+                    </div>
+                  </td>
+                  <td class="quantity__item">
+                    <div class="quantity">
+                      <div class="pro-qty-2">
+                        <input type="text" value="1" readonly>
+                      </div>
+                    </div>
+                  </td>
+                  <td id="bgb-total" class="cart__price">$ X</td>
+                </tr>
+                <tr id="mcs">
+                  <td class="product__cart__item">
+                    <div class="product__cart__item__pic">
+                      <img src="img/shopping-cart/cart-4.jpg">
+                    </div>
+                    <div class="product__cart__item__text">
+                      <h6>Basic Flowing Scarf</h6>
+                      <h5 id="mcs-precio">$ X</h5>
+                    </div>
+                  </td>
+                  <td class="quantity__item">
+                    <div class="quantity">
+                      <div class="pro-qty-2">
+                        <input type="text" value="2" readonly>
+                      </div>
+                    </div>
+                  </td>
+                  <td id="mcs-total" class="cart__price">$ X</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="cart__discount">
+            <h6>Código de descuento</h6>
+            <form action="#">
+              <input id="cupon" type="text" placeholder="Código de descuento">
+              <button type="submit" onclick="aplicarCupon()">Aplicar</button>
+            </form>
+          </div>
+          <div class="cart__total">
+            <h6>Detalle</h6>
+            <ul>
+              <li>Subtotal <span id="subtotal">$ X</span></li>
+              <li>Envío <span id="costoEnvio">$ X</span></li>
+              <li>Financiación <span id="costoFinanciacion">$ X</span></li>
+              <li>Promoción 3x2 <span id="promocion3x2">$ X</span></li>
+              <li>Cupon de descuento <span id="codigoCupon">$ X</span></li>
+              <li>Total <span id="total">$ X</span></li>
+            </ul>
+            <a href="#" class="primary-btn">Continuar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Shopping Cart Section End -->
+
+  <!-- Footer Section Begin -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer__about">
+            <div class="footer__logo">
+              <a href="#"><img src="img/isotipo_sin_fondo.svg" width="40"></a>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <img src="img/payment.png" />
+          </div>
+        </div>
+        <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+          <div class="footer__widget">
+            <h6>Lorem ipsum</h6>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <div class="footer__widget">
+            <h6>Lorem ipsum</h6>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+          <div class="footer__widget">
+            <h6>NewLetter</h6>
+            <div class="footer__newslatter">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+              <form action="#">
+                <input type="text" placeholder="Your email">
+                <button type="submit"><span class="icon_mail_alt"></span></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="footer__copyright__text">
+            <p>Este template esta hecho <i class="fa fa-heart-o"></i> por <a href="https://www.rocketcode.com.ar"
+                target="_blank">RocketCode</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
+
+  <!-- Js Plugins -->
+  <script src="js/index.js"></script>
+</body>
+
+</html>
